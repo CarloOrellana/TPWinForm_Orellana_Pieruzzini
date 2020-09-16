@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;    //centrar pantalla.
-            this.ClientSize = new Size(700, 370);
+            this.ClientSize = new Size(600, 370);
 
             Bitmap img = new Bitmap(Application.StartupPath + @"\Img\MUNDOVIOLETA.jpg");
             this.BackgroundImage = img;
@@ -37,15 +37,15 @@ namespace WindowsFormsApp1
             Dispose();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bAgregar_Click(object sender, EventArgs e)
         {
-            Form formulario = new FormBusqueda();
+            Form formulario = new FormAgregar();
             formulario.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void bModificar_Click(object sender, EventArgs e)
         {
-            Form formulario = new FormEliminar();
+            Form formulario = new FormModificar();
             formulario.Show();
         }
     }

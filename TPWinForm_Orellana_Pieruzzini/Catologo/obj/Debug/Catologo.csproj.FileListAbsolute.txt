@@ -25,3 +25,12 @@ C:\Users\carlos\Desktop\git\TP´Progamacion 3\TPWinForm_Orellana_Pieruzzini\Cato
 C:\Users\carlos\Desktop\git\TP´Progamacion 3\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.csproj.CopyComplete
 C:\Users\carlos\Desktop\git\TP´Progamacion 3\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.dll
 C:\Users\carlos\Desktop\git\TP´Progamacion 3\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.pdb
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\bin\Debug\Catologo.dll
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\bin\Debug\Catologo.pdb
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\bin\Debug\Dominio.dll
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\bin\Debug\Dominio.pdb
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.csprojAssemblyReference.cache
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.csproj.CoreCompileInputs.cache
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.csproj.CopyComplete
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.dll
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\Catologo\obj\Debug\Catologo.pdb

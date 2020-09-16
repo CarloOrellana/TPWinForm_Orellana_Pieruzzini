@@ -32,9 +32,9 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bModificar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.bAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnListadoArticulos
@@ -65,7 +65,6 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Busqueda";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -76,14 +75,15 @@
             this.button2.Text = "Detalle";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // bModificar
             // 
-            this.button3.Location = new System.Drawing.Point(400, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 28);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bModificar.Location = new System.Drawing.Point(400, 134);
+            this.bModificar.Name = "bModificar";
+            this.bModificar.Size = new System.Drawing.Size(148, 28);
+            this.bModificar.TabIndex = 4;
+            this.bModificar.Text = "Modificar";
+            this.bModificar.UseVisualStyleBackColor = true;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
             // 
             // button4
             // 
@@ -93,31 +93,31 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Eliminar";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // bAgregar
             // 
-            this.button5.Location = new System.Drawing.Point(400, 60);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(148, 28);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Agregar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.bAgregar.Location = new System.Drawing.Point(400, 60);
+            this.bAgregar.Name = "bAgregar";
+            this.bAgregar.Size = new System.Drawing.Size(148, 28);
+            this.bAgregar.TabIndex = 6;
+            this.bAgregar.Text = "Agregar";
+            this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 331);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.bModificar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnListadoArticulos);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Catalogo";
             this.ResumeLayout(false);
 
         }
@@ -128,9 +128,9 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bModificar;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button bAgregar;
     }
 }
 

@@ -17,15 +17,15 @@ namespace Catologo
             SqlDataReader lector;
             List<Articulos> lista = new List<Articulos>();
 
-            conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+            conexion.ConnectionString = "data source=PPNT-PC; initial catalog=CATALOGO_DB; integrated security=sspi";
             comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = "select P.Id, P.Codigo, P.Nombre, P.Descripcion, D.Descripcion, C.Descripcion, P.Precio  from ARTICULOS P, CATEGORIAS C, MARCAS D WHERE(P.Id = C.Id) and(P.Id = D.Id)";            
+            comando.CommandText = "select P.Id, P.Codigo, P.Nombre, P.Descripcion, P.Precio, C.Descripcion, D.Descripcion from ARTICULOS P, CATEGORIAS C, MARCAS D WHERE(P.Id = C.Id) and(P.Id = D.Id)";
             comando.Connection = conexion;
 
             conexion.Open();
             lector = comando.ExecuteReader();
 
-            while (lector.Read())
+            while(lector.Read())
             {
                 Articulos aux = new Articulos();
                 aux.Codigo = lector.GetString(1);
@@ -33,12 +33,12 @@ namespace Catologo
                 aux.Descripcion = lector.GetString(3);
 
                 aux.Marca = new Marcas();
-                aux.Marca.DescripcionMarca = lector.GetString(4);
+                aux.Marca.DescripcionMarca = lector.GetString(6);
 
                 aux.categoria = new Categoria();
                 aux.categoria.DescripcionCategoria = lector.GetString(5);
 
-                aux.Precio = lector.GetDecimal(6);
+                aux.Precio = lector.GetDecimal(4);
                 
                 lista.Add(aux);
 
@@ -49,21 +49,7 @@ namespace Catologo
 
         }
 
-        public void Eliminar(string codigo)
-        {
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-
-            conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.Connection = conexion;
-            conexion.Open();
-
-            comando.CommandText = "Delete ARTICULOS WHERE Codigo=@codigo";
-            comando.Parameters.AddWithValue("@codigo", codigo);
-            comando.ExecuteNonQuery();
-            conexion.Close();
-        }
+        
         
     }
      
