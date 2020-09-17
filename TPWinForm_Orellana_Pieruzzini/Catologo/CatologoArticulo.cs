@@ -10,6 +10,8 @@ namespace Catologo
 {
     public class CatologoArticulo
     {
+        private const string V = "select P.Id, P.Codigo, P.Nombre, P.Descripcion, P.Precio, C.Descripcion, D.Descripcion from ARTICULOS P, CATEGORIAS C, MARCAS D WHERE(P.IdCategoria = C.Id) and(P.IdMarca = D.Id)";
+
         public List<Articulos> Listar()
         {
             SqlConnection conexion = new SqlConnection();
@@ -19,7 +21,7 @@ namespace Catologo
 
             conexion.ConnectionString = "data source=PPNT-PC; initial catalog=CATALOGO_DB; integrated security=sspi";
             comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = "select P.Id, P.Codigo, P.Nombre, P.Descripcion, P.Precio, C.Descripcion, D.Descripcion from ARTICULOS P, CATEGORIAS C, MARCAS D WHERE(P.Id = C.Id) and(P.Id = D.Id)";
+            comando.CommandText = V;
             comando.Connection = conexion;
 
             conexion.Open();

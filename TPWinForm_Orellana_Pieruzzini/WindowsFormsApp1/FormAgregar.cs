@@ -16,5 +16,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            MessageBox.Show("Cancelaste la Carga");
+        }
     }
 }
