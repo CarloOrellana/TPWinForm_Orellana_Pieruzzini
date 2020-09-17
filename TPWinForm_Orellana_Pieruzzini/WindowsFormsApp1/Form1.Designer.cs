@@ -30,10 +30,10 @@
         {
             this.btnListadoArticulos = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBusqueda = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.bModificar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bntEliminar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -57,14 +57,15 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button1
+            // btnBusqueda
             // 
-            this.button1.Location = new System.Drawing.Point(75, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 28);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Busqueda";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBusqueda.Location = new System.Drawing.Point(75, 134);
+            this.btnBusqueda.Name = "btnBusqueda";
+            this.btnBusqueda.Size = new System.Drawing.Size(148, 28);
+            this.btnBusqueda.TabIndex = 2;
+            this.btnBusqueda.Text = "Busqueda";
+            this.btnBusqueda.UseVisualStyleBackColor = true;
+            this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
             // button2
             // 
@@ -85,14 +86,15 @@
             this.bModificar.UseVisualStyleBackColor = true;
             this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
             // 
-            // button4
+            // bntEliminar
             // 
-            this.button4.Location = new System.Drawing.Point(400, 207);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 28);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bntEliminar.Location = new System.Drawing.Point(400, 207);
+            this.bntEliminar.Name = "bntEliminar";
+            this.bntEliminar.Size = new System.Drawing.Size(148, 28);
+            this.bntEliminar.TabIndex = 5;
+            this.bntEliminar.Text = "Eliminar";
+            this.bntEliminar.UseVisualStyleBackColor = true;
+            this.bntEliminar.Click += new System.EventHandler(this.bntEliminar_Click);
             // 
             // bAgregar
             // 
@@ -110,10 +112,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 331);
             this.Controls.Add(this.bAgregar);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.bntEliminar);
             this.Controls.Add(this.bModificar);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnListadoArticulos);
             this.Name = "Form1";
@@ -126,10 +128,10 @@
 
         private System.Windows.Forms.Button btnListadoArticulos;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBusqueda;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button bModificar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bntEliminar;
         private System.Windows.Forms.Button bAgregar;
     }
 }

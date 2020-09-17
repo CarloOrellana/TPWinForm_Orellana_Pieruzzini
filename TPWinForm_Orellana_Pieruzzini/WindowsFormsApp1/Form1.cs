@@ -48,5 +48,17 @@ namespace WindowsFormsApp1
             Form formulario = new FormModificar();
             formulario.Show();
         }
+
+        private void btnBusqueda_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FormBusqueda();
+            formulario.Show();
+        }
+
+        private void bntEliminar_Click(object sender, EventArgs e)
+        {
+            Form formulario = new FormEliminar();
+            formulario.Show();
+        }
     }
 }
