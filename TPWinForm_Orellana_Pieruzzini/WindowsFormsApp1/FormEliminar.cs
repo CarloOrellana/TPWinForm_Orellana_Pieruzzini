@@ -44,16 +44,23 @@ namespace WindowsFormsApp1
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             CatologoArticulo catalogo = new CatologoArticulo();
-            string codigo = ((Articulos)dgvLista.CurrentRow.DataBoundItem).Codigo;
-            if (MessageBox.Show("Quiere eliminar el articulo?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                catalogo.Eliminar(codigo);
-                dgvLista.DataSource = catalogo.Listar();
-                dgvLista.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                dgvLista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-                dgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
-            }
 
+            try
+            {
+                string codigo = ((Articulos)dgvLista.CurrentRow.DataBoundItem).Codigo;
+                if (MessageBox.Show("Quiere eliminar el articulo?", "Eliminar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    catalogo.Eliminar(codigo);
+                    dgvLista.DataSource = catalogo.Listar();
+                    dgvLista.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    dgvLista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+                    dgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

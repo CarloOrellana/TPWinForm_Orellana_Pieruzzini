@@ -48,17 +48,26 @@ namespace WindowsFormsApp1
             List<Articulos> Busqueda;
             CatologoArticulo BuscarArticulo = new CatologoArticulo();
             Lista = BuscarArticulo.Listar();
-            if (txtboxBusqueda.Text == " ")
+
+            try
             {
-                dgvLista.DataSource = Lista;
-                Busqueda = Lista;
-            }
-            else
-            {
-                Busqueda = Lista.FindAll(Y => Y.Descripcion.ToLower().Contains(txtboxBusqueda.Text.ToLower()) || Y.Nombre.ToLower().Contains(txtboxBusqueda.Text.ToLower()) || Y.Codigo.ToLower().Contains(txtboxBusqueda.Text.ToLower()));
+                if (txtboxBusqueda.Text == " ")
+                {
+                    dgvLista.DataSource = Lista;
+                    Busqueda = Lista;
+                }
+                else
+                {
+                    Busqueda = Lista.FindAll(Y => Y.Descripcion.ToLower().Contains(txtboxBusqueda.Text.ToLower()) || Y.Nombre.ToLower().Contains(txtboxBusqueda.Text.ToLower()) || Y.Codigo.ToLower().Contains(txtboxBusqueda.Text.ToLower()));
+                    dgvLista.DataSource = Busqueda;
+                }
                 dgvLista.DataSource = Busqueda;
             }
-            dgvLista.DataSource = Busqueda;
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
         }
     }
 }
