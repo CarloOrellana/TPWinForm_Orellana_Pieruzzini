@@ -113,6 +113,29 @@ namespace Catologo
             }
 
         }
+        
+        public void Editar(int id, string codigo, string nombre, string descripcion, string idMarca, string idCategoria, string Imagen, string precio)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "data source= PPnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.Connection = conexion;
+                conexion.Open();
+
+                comando.CommandText = "update ARTICULOS set (Id,Codigo, Nombre, Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio)values('"+id+"','" + codigo + "','" + nombre + "','" + descripcion + "','" + idMarca + "','" + idCategoria + "','" + Imagen + "','" + precio + "')";
+                comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
 
     }
      

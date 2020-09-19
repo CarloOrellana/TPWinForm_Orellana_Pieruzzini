@@ -59,5 +59,24 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void bEditar_Click(object sender, EventArgs e)
+        {
+            if(dGVModificar.SelectedRows.Count>0)
+            {
+                tCodigo.Text = dGVModificar.CurrentRow.Cells["Codigo"].Value.ToString();
+                tBNombre.Text = dGVModificar.CurrentRow.Cells["Nombre"].Value.ToString();
+                tBDesc.Text = dGVModificar.CurrentRow.Cells["Descripcion"].Value.ToString();
+               // cBMarca.Text = dGVModificar.CurrentRow.Cells["IdMarca"].Value.ToString();
+              //  cBCategoria.Text = dGVModificar.CurrentRow.Cells["IdCategoria"].Value.ToString();
+               // tBImagen.Text = dGVModificar.CurrentRow.Cells["ImagenUrl"].Value.ToString();
+                tBPrecio.Text = dGVModificar.CurrentRow.Cells["Precio"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una Fila");
+            }
+
+        }
     }
 }

@@ -32,10 +32,10 @@
             this.bCancelar = new System.Windows.Forms.Button();
             this.lCodigo = new System.Windows.Forms.Label();
             this.tBuscar = new System.Windows.Forms.TextBox();
-            this.bBuscar = new System.Windows.Forms.Button();
+            this.bEditar = new System.Windows.Forms.Button();
             this.dGVModificar = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cBMarca = new System.Windows.Forms.ComboBox();
+            this.cBCategoria = new System.Windows.Forms.ComboBox();
             this.tCodigo = new System.Windows.Forms.TextBox();
             this.tBNombre = new System.Windows.Forms.TextBox();
             this.tBDesc = new System.Windows.Forms.TextBox();
@@ -88,14 +88,15 @@
             this.tBuscar.TabIndex = 3;
             this.tBuscar.TextChanged += new System.EventHandler(this.tBuscar_TextChanged);
             // 
-            // bBuscar
+            // bEditar
             // 
-            this.bBuscar.Location = new System.Drawing.Point(416, 32);
-            this.bBuscar.Name = "bBuscar";
-            this.bBuscar.Size = new System.Drawing.Size(75, 23);
-            this.bBuscar.TabIndex = 4;
-            this.bBuscar.Text = "Buscar";
-            this.bBuscar.UseVisualStyleBackColor = true;
+            this.bEditar.Location = new System.Drawing.Point(416, 32);
+            this.bEditar.Name = "bEditar";
+            this.bEditar.Size = new System.Drawing.Size(75, 23);
+            this.bEditar.TabIndex = 4;
+            this.bEditar.Text = "Editar";
+            this.bEditar.UseVisualStyleBackColor = true;
+            this.bEditar.Click += new System.EventHandler(this.bEditar_Click);
             // 
             // dGVModificar
             // 
@@ -105,21 +106,21 @@
             this.dGVModificar.Size = new System.Drawing.Size(776, 109);
             this.dGVModificar.TabIndex = 5;
             // 
-            // comboBox1
+            // cBMarca
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(153, 279);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cBMarca.FormattingEnabled = true;
+            this.cBMarca.Location = new System.Drawing.Point(153, 279);
+            this.cBMarca.Name = "cBMarca";
+            this.cBMarca.Size = new System.Drawing.Size(151, 21);
+            this.cBMarca.TabIndex = 6;
             // 
-            // comboBox2
+            // cBCategoria
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(153, 306);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 21);
-            this.comboBox2.TabIndex = 7;
+            this.cBCategoria.FormattingEnabled = true;
+            this.cBCategoria.Location = new System.Drawing.Point(153, 306);
+            this.cBCategoria.Name = "cBCategoria";
+            this.cBCategoria.Size = new System.Drawing.Size(151, 21);
+            this.cBCategoria.TabIndex = 7;
             // 
             // tCodigo
             // 
@@ -237,10 +238,10 @@
             this.Controls.Add(this.tBDesc);
             this.Controls.Add(this.tBNombre);
             this.Controls.Add(this.tCodigo);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cBCategoria);
+            this.Controls.Add(this.cBMarca);
             this.Controls.Add(this.dGVModificar);
-            this.Controls.Add(this.bBuscar);
+            this.Controls.Add(this.bEditar);
             this.Controls.Add(this.tBuscar);
             this.Controls.Add(this.lCodigo);
             this.Controls.Add(this.bCancelar);
@@ -259,10 +260,10 @@
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Label lCodigo;
         private System.Windows.Forms.TextBox tBuscar;
-        private System.Windows.Forms.Button bBuscar;
+        private System.Windows.Forms.Button bEditar;
         private System.Windows.Forms.DataGridView dGVModificar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cBMarca;
+        private System.Windows.Forms.ComboBox cBCategoria;
         private System.Windows.Forms.TextBox tCodigo;
         private System.Windows.Forms.TextBox tBNombre;
         private System.Windows.Forms.TextBox tBDesc;
