@@ -21,7 +21,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = V;
                 comando.Connection = conexion;
@@ -57,6 +57,16 @@ namespace Catologo
 
         }
 
+        public void Agregar(string codigo, string nombre, string descripcion, int v1, int v2, string imagen, decimal v3)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Agregar(string codigo, string nombre, string descripcion, int v1, int v2, string imagen, double v3)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Eliminar(string codigo)
         {
             SqlConnection conexion = new SqlConnection();
@@ -64,7 +74,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= PPnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -79,6 +89,29 @@ namespace Catologo
                 throw ex;
             }
          
+        }
+
+        public void Agregar(string codigo, string nombre, string descripcion, string idMarca, string idCategoria, string Imagen, string precio)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            try
+            {
+                conexion.ConnectionString = "data source= PPnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.Connection = conexion;
+                conexion.Open();
+
+                comando.CommandText = "insert into ARTICULOS (Codigo, Nombre, Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio)values('"+codigo+"','"+nombre+"','"+descripcion+"','"+idMarca+"','"+idCategoria+"','"+Imagen+"','"+precio+"')";
+                comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
     }
