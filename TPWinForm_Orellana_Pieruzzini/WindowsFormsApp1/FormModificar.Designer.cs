@@ -53,19 +53,21 @@
             // 
             // bAceptar
             // 
-            this.bAceptar.Location = new System.Drawing.Point(167, 405);
+            this.bAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAceptar.Location = new System.Drawing.Point(631, 300);
             this.bAceptar.Name = "bAceptar";
-            this.bAceptar.Size = new System.Drawing.Size(75, 23);
+            this.bAceptar.Size = new System.Drawing.Size(150, 50);
             this.bAceptar.TabIndex = 0;
-            this.bAceptar.Text = "Acepctar";
+            this.bAceptar.Text = "Aceptar";
             this.bAceptar.UseVisualStyleBackColor = true;
             this.bAceptar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(373, 405);
+            this.bCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCancelar.Location = new System.Drawing.Point(631, 374);
             this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(75, 23);
+            this.bCancelar.Size = new System.Drawing.Size(150, 50);
             this.bCancelar.TabIndex = 1;
             this.bCancelar.Text = "Cancelar";
             this.bCancelar.UseVisualStyleBackColor = true;
@@ -74,25 +76,31 @@
             // lCodigo
             // 
             this.lCodigo.AutoSize = true;
-            this.lCodigo.Location = new System.Drawing.Point(39, 42);
+            this.lCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCodigo.ForeColor = System.Drawing.Color.White;
+            this.lCodigo.Location = new System.Drawing.Point(49, 31);
+            this.lCodigo.MaximumSize = new System.Drawing.Size(200, 24);
+            this.lCodigo.MinimumSize = new System.Drawing.Size(150, 24);
             this.lCodigo.Name = "lCodigo";
-            this.lCodigo.Size = new System.Drawing.Size(89, 13);
+            this.lCodigo.Size = new System.Drawing.Size(176, 24);
             this.lCodigo.TabIndex = 2;
             this.lCodigo.Text = "Ingrese el Codigo";
             // 
             // tBuscar
             // 
-            this.tBuscar.Location = new System.Drawing.Point(153, 35);
+            this.tBuscar.Location = new System.Drawing.Point(242, 35);
             this.tBuscar.Name = "tBuscar";
-            this.tBuscar.Size = new System.Drawing.Size(238, 20);
+            this.tBuscar.Size = new System.Drawing.Size(300, 20);
             this.tBuscar.TabIndex = 3;
             this.tBuscar.TextChanged += new System.EventHandler(this.tBuscar_TextChanged);
             // 
             // bEditar
             // 
-            this.bEditar.Location = new System.Drawing.Point(416, 32);
+            this.bEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEditar.Location = new System.Drawing.Point(579, 25);
             this.bEditar.Name = "bEditar";
-            this.bEditar.Size = new System.Drawing.Size(75, 23);
+            this.bEditar.Size = new System.Drawing.Size(150, 30);
             this.bEditar.TabIndex = 4;
             this.bEditar.Text = "Editar";
             this.bEditar.UseVisualStyleBackColor = true;
@@ -111,7 +119,7 @@
             this.cBMarca.FormattingEnabled = true;
             this.cBMarca.Location = new System.Drawing.Point(153, 279);
             this.cBMarca.Name = "cBMarca";
-            this.cBMarca.Size = new System.Drawing.Size(151, 21);
+            this.cBMarca.Size = new System.Drawing.Size(300, 21);
             this.cBMarca.TabIndex = 6;
             // 
             // cBCategoria
@@ -119,105 +127,139 @@
             this.cBCategoria.FormattingEnabled = true;
             this.cBCategoria.Location = new System.Drawing.Point(153, 306);
             this.cBCategoria.Name = "cBCategoria";
-            this.cBCategoria.Size = new System.Drawing.Size(151, 21);
+            this.cBCategoria.Size = new System.Drawing.Size(300, 21);
             this.cBCategoria.TabIndex = 7;
             // 
             // tCodigo
             // 
             this.tCodigo.Location = new System.Drawing.Point(153, 189);
             this.tCodigo.Name = "tCodigo";
-            this.tCodigo.Size = new System.Drawing.Size(151, 20);
+            this.tCodigo.Size = new System.Drawing.Size(300, 20);
             this.tCodigo.TabIndex = 8;
             // 
             // tBNombre
             // 
             this.tBNombre.Location = new System.Drawing.Point(153, 216);
             this.tBNombre.Name = "tBNombre";
-            this.tBNombre.Size = new System.Drawing.Size(151, 20);
+            this.tBNombre.Size = new System.Drawing.Size(300, 20);
             this.tBNombre.TabIndex = 9;
             // 
             // tBDesc
             // 
             this.tBDesc.Location = new System.Drawing.Point(153, 250);
             this.tBDesc.Name = "tBDesc";
-            this.tBDesc.Size = new System.Drawing.Size(151, 20);
+            this.tBDesc.Size = new System.Drawing.Size(300, 20);
             this.tBDesc.TabIndex = 10;
             // 
             // tBImagen
             // 
             this.tBImagen.Location = new System.Drawing.Point(153, 338);
             this.tBImagen.Name = "tBImagen";
-            this.tBImagen.Size = new System.Drawing.Size(151, 20);
+            this.tBImagen.Size = new System.Drawing.Size(300, 20);
             this.tBImagen.TabIndex = 11;
-            this.tBImagen.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // tBPrecio
             // 
             this.tBPrecio.Location = new System.Drawing.Point(153, 369);
             this.tBPrecio.Name = "tBPrecio";
-            this.tBPrecio.Size = new System.Drawing.Size(151, 20);
+            this.tBPrecio.Size = new System.Drawing.Size(300, 20);
             this.tBPrecio.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 196);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(22, 185);
+            this.label1.MaximumSize = new System.Drawing.Size(130, 24);
+            this.label1.MinimumSize = new System.Drawing.Size(130, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 13;
             this.label1.Text = "Codigo";
             // 
             // lNombre
             // 
             this.lNombre.AutoSize = true;
-            this.lNombre.Location = new System.Drawing.Point(22, 223);
+            this.lNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombre.ForeColor = System.Drawing.Color.White;
+            this.lNombre.Location = new System.Drawing.Point(22, 212);
+            this.lNombre.MaximumSize = new System.Drawing.Size(130, 24);
+            this.lNombre.MinimumSize = new System.Drawing.Size(130, 24);
             this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(44, 13);
+            this.lNombre.Size = new System.Drawing.Size(130, 24);
             this.lNombre.TabIndex = 14;
             this.lNombre.Text = "Nombre";
             // 
             // lDesc
             // 
             this.lDesc.AutoSize = true;
-            this.lDesc.Location = new System.Drawing.Point(22, 253);
+            this.lDesc.BackColor = System.Drawing.Color.Transparent;
+            this.lDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDesc.ForeColor = System.Drawing.Color.White;
+            this.lDesc.Location = new System.Drawing.Point(22, 246);
+            this.lDesc.MaximumSize = new System.Drawing.Size(130, 24);
+            this.lDesc.MinimumSize = new System.Drawing.Size(130, 24);
             this.lDesc.Name = "lDesc";
-            this.lDesc.Size = new System.Drawing.Size(63, 13);
+            this.lDesc.Size = new System.Drawing.Size(130, 24);
             this.lDesc.TabIndex = 15;
             this.lDesc.Text = "Descripcion";
             // 
             // lMarca
             // 
             this.lMarca.AutoSize = true;
-            this.lMarca.Location = new System.Drawing.Point(22, 282);
+            this.lMarca.BackColor = System.Drawing.Color.Transparent;
+            this.lMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lMarca.ForeColor = System.Drawing.Color.White;
+            this.lMarca.Location = new System.Drawing.Point(22, 276);
+            this.lMarca.MaximumSize = new System.Drawing.Size(130, 24);
+            this.lMarca.MinimumSize = new System.Drawing.Size(130, 24);
             this.lMarca.Name = "lMarca";
-            this.lMarca.Size = new System.Drawing.Size(37, 13);
+            this.lMarca.Size = new System.Drawing.Size(130, 24);
             this.lMarca.TabIndex = 16;
             this.lMarca.Text = "Marca";
             // 
             // lCategoria
             // 
             this.lCategoria.AutoSize = true;
-            this.lCategoria.Location = new System.Drawing.Point(22, 314);
+            this.lCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.lCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCategoria.ForeColor = System.Drawing.Color.White;
+            this.lCategoria.Location = new System.Drawing.Point(22, 303);
+            this.lCategoria.MaximumSize = new System.Drawing.Size(130, 24);
+            this.lCategoria.MinimumSize = new System.Drawing.Size(130, 24);
             this.lCategoria.Name = "lCategoria";
-            this.lCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lCategoria.Size = new System.Drawing.Size(130, 24);
             this.lCategoria.TabIndex = 17;
             this.lCategoria.Text = "Categoria";
             // 
             // lImagen
             // 
             this.lImagen.AutoSize = true;
-            this.lImagen.Location = new System.Drawing.Point(22, 341);
+            this.lImagen.BackColor = System.Drawing.Color.Transparent;
+            this.lImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lImagen.ForeColor = System.Drawing.Color.White;
+            this.lImagen.Location = new System.Drawing.Point(22, 334);
+            this.lImagen.MaximumSize = new System.Drawing.Size(130, 24);
+            this.lImagen.MinimumSize = new System.Drawing.Size(130, 24);
             this.lImagen.Name = "lImagen";
-            this.lImagen.Size = new System.Drawing.Size(42, 13);
+            this.lImagen.Size = new System.Drawing.Size(130, 24);
             this.lImagen.TabIndex = 18;
             this.lImagen.Text = "Imagen";
             // 
             // lPrecio
             // 
             this.lPrecio.AutoSize = true;
-            this.lPrecio.Location = new System.Drawing.Point(22, 369);
+            this.lPrecio.BackColor = System.Drawing.Color.Transparent;
+            this.lPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lPrecio.ForeColor = System.Drawing.Color.White;
+            this.lPrecio.Location = new System.Drawing.Point(22, 365);
+            this.lPrecio.MaximumSize = new System.Drawing.Size(130, 24);
+            this.lPrecio.MinimumSize = new System.Drawing.Size(130, 24);
             this.lPrecio.Name = "lPrecio";
-            this.lPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lPrecio.Size = new System.Drawing.Size(130, 24);
             this.lPrecio.TabIndex = 19;
             this.lPrecio.Text = "Precio";
             // 
@@ -225,6 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lPrecio);
             this.Controls.Add(this.lImagen);
@@ -246,8 +289,10 @@
             this.Controls.Add(this.lCodigo);
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.bAceptar);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FormModificar";
             this.Text = "Modificar";
+            this.Load += new System.EventHandler(this.FormModificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVModificar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

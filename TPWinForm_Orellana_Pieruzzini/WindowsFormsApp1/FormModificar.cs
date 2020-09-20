@@ -22,6 +22,14 @@ namespace WindowsFormsApp1
         public FormModificar()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;    //centrar pantalla.
+            this.ClientSize = new Size(820, 490);
+
+            Bitmap img = new Bitmap(Application.StartupPath + @"\Img\MUNDOVIOLETA.jpg");
+            this.BackgroundImage = img;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -37,7 +45,8 @@ namespace WindowsFormsApp1
             Lista = BuscarArticulo.Listar();
             try
             {
-                if(tBuscar.Text==" ")
+                
+                if (tBuscar.Text==" ")
                 {
                     dGVModificar.DataSource = Lista;
                     Busqueda = Lista;
@@ -55,21 +64,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bEditar_Click(object sender, EventArgs e)
+       private void bEditar_Click(object sender, EventArgs e)
         {
             if(dGVModificar.SelectedRows.Count>0)
             {
                 tCodigo.Text = dGVModificar.CurrentRow.Cells["Codigo"].Value.ToString();
                 tBNombre.Text = dGVModificar.CurrentRow.Cells["Nombre"].Value.ToString();
                 tBDesc.Text = dGVModificar.CurrentRow.Cells["Descripcion"].Value.ToString();
-               // cBMarca.Text = dGVModificar.CurrentRow.Cells["IdMarca"].Value.ToString();
-              //  cBCategoria.Text = dGVModificar.CurrentRow.Cells["IdCategoria"].Value.ToString();
-               // tBImagen.Text = dGVModificar.CurrentRow.Cells["ImagenUrl"].Value.ToString();
+                cBMarca.Text = dGVModificar.CurrentRow.Cells["IdMarca"].Value.ToString();
+                cBCategoria.Text = dGVModificar.CurrentRow.Cells["IdCategoria"].Value.ToString();
+                tBImagen.Text = dGVModificar.CurrentRow.Cells["ImagenUrl"].Value.ToString();
                 tBPrecio.Text = dGVModificar.CurrentRow.Cells["Precio"].Value.ToString();
             }
             else
@@ -77,6 +81,36 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Seleccione una Fila");
             }
 
+        }
+
+        private void FormModificar_Load(object sender, EventArgs e)
+        {
+            CatologoArticulo cargar = new CatologoArticulo();
+
+
+            try
+            {
+                cBMarca.DataSource = cargar.ListarMarca();
+                cBMarca.DisplayMember = "Descripcion";
+                cBMarca.ValueMember = "Id";
+                cBMarca.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+            }
+            CatologoArticulo auxcargar = new CatologoArticulo();
+            try
+            {
+                cBCategoria.DataSource = auxcargar.ListarCategoria();
+                cBCategoria.DisplayMember = "Descripcion";
+                cBCategoria.ValueMember = "Id";
+                cBCategoria.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+            }
         }
     }
 }

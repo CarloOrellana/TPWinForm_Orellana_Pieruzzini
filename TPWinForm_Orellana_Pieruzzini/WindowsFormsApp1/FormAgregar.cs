@@ -19,6 +19,14 @@ namespace WindowsFormsApp1
         public FormAgregar()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;    //centrar pantalla.
+            this.ClientSize = new Size(820, 490);
+
+            Bitmap img = new Bitmap(Application.StartupPath + @"\Img\MUNDOVIOLETA.jpg");
+            this.BackgroundImage = img;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -44,6 +52,41 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No se pudo Agregar el Articulo");
             }
             Dispose();
+        }
+
+        private void FormAgregar_Load(object sender, EventArgs e)
+        {
+            CatologoArticulo cargar = new CatologoArticulo();
+            
+
+            try
+            {
+                cBMarca.DataSource = cargar.ListarMarca();
+                cBMarca.DisplayMember = "Descripcion";
+                cBMarca.ValueMember = "Id";
+                cBMarca.SelectedIndex = -1;
+            }
+            catch(Exception ex)
+            {
+                //throw ex;
+            }
+            CatologoArticulo auxcargar = new CatologoArticulo();
+            try
+            {
+                cBCategoria.DataSource = auxcargar.ListarCategoria();
+                cBCategoria.DisplayMember = "Descripcion";
+                cBCategoria.ValueMember = "Id";
+                cBCategoria.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                //throw ex;
+            }
+        }
+ 
+        private void tBPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < 47 || e.KeyChar > 58) && e.KeyChar != 46) e.Handled = true;
         }
     }
 }

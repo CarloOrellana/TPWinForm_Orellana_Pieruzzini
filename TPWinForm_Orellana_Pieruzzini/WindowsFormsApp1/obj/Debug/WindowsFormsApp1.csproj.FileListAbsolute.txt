@@ -90,3 +90,5 @@ C:\Users\Administrador\Desktop\GitHub\TPWinForm_Orellana_Pieruzzini\TPWinForm_Or
 C:\Users\Administrador\Desktop\GitHub\TPWinForm_Orellana_Pieruzzini\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormBusqueda.resources
 D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormEliminar.resources
+D:\FF\UTN\CARRERA\03 - Programacion III\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormDetalle.resources
+C:\Users\carlos\Desktop\git\TP´Progamacion 3\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormDetalle.resources

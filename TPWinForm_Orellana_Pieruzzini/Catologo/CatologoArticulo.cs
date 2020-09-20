@@ -10,7 +10,7 @@ namespace Catologo
 {
     public class CatologoArticulo
     {
-        private const string V = "select P.Id, P.Codigo, P.Nombre, P.Descripcion, P.Precio, D.Descripcion, C.Descripcion from ARTICULOS P Left join CATEGORIAS C on C.Id = P.IdCategoria inner join MARCAS D  on D.Id = P.IdMarca order by P.Id asc";
+        private const string V = "select P.Id, P.Codigo, P.Nombre, P.Descripcion, P.ImagenUrl, P.Precio, D.Descripcion, C.Descripcion from ARTICULOS P Left join CATEGORIAS C on C.Id = P.IdCategoria inner join MARCAS D  on D.Id = P.IdMarca order by P.Id asc";
 
         public List<Articulos> Listar()
         {
@@ -21,7 +21,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = V;
                 comando.Connection = conexion;
@@ -36,12 +36,13 @@ namespace Catologo
                     aux.Descripcion = lector.GetString(3);
 
                     aux.Marca = new Marcas();
-                    aux.Marca.DescripcionMarca = lector.GetString(5);
+                    aux.Marca.DescripcionMarca = lector.GetString(6);
 
                     aux.categoria = new Categoria();
                     aux.categoria.DescripcionCategoria = (string)lector["Descripcion"];
 
-                    aux.Precio = lector.GetDecimal(4);
+                    aux.Precio = lector.GetDecimal(5);
+                    aux.Imagen = (string)lector["ImagenUrl"];
 
                     lista.Add(aux);
 
@@ -55,6 +56,70 @@ namespace Catologo
             conexion.Close();
             return lista;
 
+        }
+
+        public List<Marcas> ListarMarca()
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            List<Marcas> lista = new List<Marcas>();
+
+            try
+            {
+                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select Id, Descripcion from MARCAS";
+                comando.Connection = conexion;
+
+                conexion.Open();
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    Marcas aux = new Marcas();
+                    aux.idMarca = lector.GetInt32(0);
+                    aux.DescripcionMarca = lector.GetString(1);
+                    lista.Add(aux);
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            conexion.Close();
+            return lista;
+        }
+
+        public List<Categoria> ListarCategoria()
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            List<Categoria> lista = new List<Categoria>();
+
+            try
+            {
+                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select Id, Descripcion from CATEGORIAS";
+                comando.Connection = conexion;
+
+                conexion.Open();
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    Categoria aux = new Categoria();
+                    aux.id = lector.GetInt32(0);
+                    aux.DescripcionCategoria = lector.GetString(1);
+                    lista.Add(aux);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            conexion.Close();
+            return lista;
         }
 
         public void Agregar(string codigo, string nombre, string descripcion, int v1, int v2, string imagen, decimal v3)
@@ -74,7 +139,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source= PPnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -98,7 +163,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source= PPnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -121,7 +186,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source= PPnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
