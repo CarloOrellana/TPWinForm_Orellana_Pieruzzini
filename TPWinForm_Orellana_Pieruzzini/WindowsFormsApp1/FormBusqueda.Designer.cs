@@ -78,7 +78,7 @@
             this.txtboxBusqueda.MaximumSize = new System.Drawing.Size(300, 30);
             this.txtboxBusqueda.MinimumSize = new System.Drawing.Size(300, 30);
             this.txtboxBusqueda.Name = "txtboxBusqueda";
-            this.txtboxBusqueda.Size = new System.Drawing.Size(300, 30);
+            this.txtboxBusqueda.Size = new System.Drawing.Size(300, 20);
             this.txtboxBusqueda.TabIndex = 3;
             this.txtboxBusqueda.TextChanged += new System.EventHandler(this.txtboxBusqueda_TextChanged);
             // 
@@ -92,7 +92,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvLista);
             this.Name = "FormBusqueda";
-            this.Text = "FormBusqueda";
+            this.Text = "Busqueda";
             this.Load += new System.EventHandler(this.FormBusqueda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = V;
                 comando.Connection = conexion;
@@ -76,7 +76,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select Id, Descripcion from MARCAS";
                 comando.Connection = conexion;
@@ -108,7 +108,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select Id, Descripcion from CATEGORIAS";
                 comando.Connection = conexion;
@@ -138,7 +138,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -162,7 +162,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -196,7 +196,7 @@ namespace Catologo
             
             try
             {
-                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();

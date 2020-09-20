@@ -97,3 +97,4 @@ C:\Users\carlos\Desktop\tpProg3Pruebas\TPWinForm_Orellana_Pieruzzini\WindowsForm
 C:\Users\carlos\Desktop\tpProg3Pruebas\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormEliminar.resources
 C:\Users\carlos\Desktop\tpProg3Pruebas\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormModificar.resources
 C:\Users\carlos\Desktop\tpProg3Pruebas\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAgregar.resources
+C:\Users\Administrador\Desktop\GitHub\TPWinForm_Orellana_Pieruzzini\TPWinForm_Orellana_Pieruzzini\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormDetalle.resources

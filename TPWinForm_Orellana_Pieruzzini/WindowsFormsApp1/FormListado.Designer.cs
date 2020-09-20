@@ -63,7 +63,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvLista);
             this.Name = "FormListado";
-            this.Text = "FormListado";
+            this.Text = "Listado";
             this.Load += new System.EventHandler(this.FormListado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);

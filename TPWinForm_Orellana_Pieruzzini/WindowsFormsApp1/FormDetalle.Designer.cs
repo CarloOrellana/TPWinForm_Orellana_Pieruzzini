@@ -186,7 +186,7 @@
             this.Controls.Add(this.bDetalle);
             this.Controls.Add(this.dGVDetalle);
             this.Name = "FormDetalle";
-            this.Text = "Form2";
+            this.Text = "Detalle";
             this.Load += new System.EventHandler(this.FormDetalle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBArticulo)).EndInit();

@@ -73,7 +73,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvLista);
             this.Name = "FormEliminar";
-            this.Text = "FormEliminar";
+            this.Text = "Eliminar";
             this.Load += new System.EventHandler(this.FormEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
