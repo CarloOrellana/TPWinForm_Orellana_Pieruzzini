@@ -8,7 +8,7 @@ namespace Dominio
 {
      public class Categoria
     {
-        private int id;
+        public int idCategoria { get; set; }
 
         public string DescripcionCategoria { get; set; }
 

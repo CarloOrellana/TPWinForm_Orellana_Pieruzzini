@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;    //centrar pantalla.
-            this.ClientSize = new Size(600, 370);
+            this.ClientSize = new Size(820, 490);
 
             Bitmap img = new Bitmap(Application.StartupPath + @"\Img\MUNDOVIOLETA.jpg");
             this.BackgroundImage = img;

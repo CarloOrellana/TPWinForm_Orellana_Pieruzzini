@@ -8,7 +8,7 @@ namespace Dominio
 {
     public class Articulos
     {
-        private int id;
+        public int idArticulo { get; set; }
 
         public string Codigo { get; set; }
 
@@ -21,6 +21,7 @@ namespace Dominio
         public Categoria categoria { get; set; }
 
         public decimal Precio { get; set; }
+
         public string Imagen { get; set; }
     } 
 

@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;    //centrar pantalla.
-            this.ClientSize = new Size(600, 370);
+            this.ClientSize = new Size(820, 490);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
 
@@ -34,6 +34,8 @@ namespace WindowsFormsApp1
                 dgvLista.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgvLista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
                 dgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
+                dgvLista.Columns[0].Visible = false;
+                dgvLista.Columns[7].Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

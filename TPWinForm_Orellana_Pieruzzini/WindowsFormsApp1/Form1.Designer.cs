@@ -39,9 +39,10 @@
             // 
             // btnListadoArticulos
             // 
-            this.btnListadoArticulos.Location = new System.Drawing.Point(75, 60);
+            this.btnListadoArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListadoArticulos.Location = new System.Drawing.Point(98, 90);
             this.btnListadoArticulos.Name = "btnListadoArticulos";
-            this.btnListadoArticulos.Size = new System.Drawing.Size(148, 28);
+            this.btnListadoArticulos.Size = new System.Drawing.Size(200, 40);
             this.btnListadoArticulos.TabIndex = 0;
             this.btnListadoArticulos.Text = "Listado de Articulos\r\n";
             this.btnListadoArticulos.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(250, 286);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(315, 399);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(136, 33);
+            this.btnSalir.Size = new System.Drawing.Size(200, 40);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // 
             // btnBusqueda
             // 
-            this.btnBusqueda.Location = new System.Drawing.Point(75, 134);
+            this.btnBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusqueda.Location = new System.Drawing.Point(98, 200);
             this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(148, 28);
+            this.btnBusqueda.Size = new System.Drawing.Size(200, 40);
             this.btnBusqueda.TabIndex = 2;
             this.btnBusqueda.Text = "Busqueda";
             this.btnBusqueda.UseVisualStyleBackColor = true;
@@ -69,9 +72,10 @@
             // 
             // bDetalle
             // 
-            this.bDetalle.Location = new System.Drawing.Point(75, 207);
+            this.bDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bDetalle.Location = new System.Drawing.Point(98, 310);
             this.bDetalle.Name = "bDetalle";
-            this.bDetalle.Size = new System.Drawing.Size(148, 28);
+            this.bDetalle.Size = new System.Drawing.Size(200, 40);
             this.bDetalle.TabIndex = 3;
             this.bDetalle.Text = "Detalle";
             this.bDetalle.UseVisualStyleBackColor = true;
@@ -79,9 +83,10 @@
             // 
             // bModificar
             // 
-            this.bModificar.Location = new System.Drawing.Point(400, 134);
+            this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bModificar.Location = new System.Drawing.Point(522, 200);
             this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(148, 28);
+            this.bModificar.Size = new System.Drawing.Size(200, 40);
             this.bModificar.TabIndex = 4;
             this.bModificar.Text = "Modificar";
             this.bModificar.UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@
             // 
             // bntEliminar
             // 
-            this.bntEliminar.Location = new System.Drawing.Point(400, 207);
+            this.bntEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntEliminar.Location = new System.Drawing.Point(522, 310);
             this.bntEliminar.Name = "bntEliminar";
-            this.bntEliminar.Size = new System.Drawing.Size(148, 28);
+            this.bntEliminar.Size = new System.Drawing.Size(200, 40);
             this.bntEliminar.TabIndex = 5;
             this.bntEliminar.Text = "Eliminar";
             this.bntEliminar.UseVisualStyleBackColor = true;
@@ -99,9 +105,10 @@
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(400, 60);
+            this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAgregar.Location = new System.Drawing.Point(522, 90);
             this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(148, 28);
+            this.bAgregar.Size = new System.Drawing.Size(200, 40);
             this.bAgregar.TabIndex = 6;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
@@ -111,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 331);
+            this.ClientSize = new System.Drawing.Size(804, 451);
             this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.bntEliminar);
             this.Controls.Add(this.bModificar);
