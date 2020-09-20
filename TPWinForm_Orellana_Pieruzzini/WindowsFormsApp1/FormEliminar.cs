@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;    //centrar pantalla.
-            this.ClientSize = new Size(820, 490);
+            this.ClientSize = new Size(700, 370);
 
             Bitmap img = new Bitmap(Application.StartupPath + @"\Img\MUNDOVIOLETA.jpg");
             this.BackgroundImage = img;
@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             dgvLista.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvLista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
-            dgvLista.Columns[6].Visible = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

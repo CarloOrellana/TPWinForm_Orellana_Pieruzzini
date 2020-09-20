@@ -19,14 +19,6 @@ namespace WindowsFormsApp1
         public FormDetalle()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;    //centrar pantalla.
-            this.ClientSize = new Size(820, 490);
-
-            Bitmap img = new Bitmap(Application.StartupPath + @"\Img\MUNDOVIOLETA.jpg");
-            this.BackgroundImage = img;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void bDetalle_Click(object sender, EventArgs e)
@@ -48,25 +40,12 @@ namespace WindowsFormsApp1
             dGVDetalle.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dGVDetalle.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dGVDetalle.BackgroundColor = System.Drawing.SystemColors.Control;
-            dGVDetalle.Columns[6].Visible = false;
         }
 
         private void dGVDetalle_SelectionChanged(object sender, EventArgs e)
         {
-            try
-            { 
-                Articulos art = (Articulos)dGVDetalle.CurrentRow.DataBoundItem;
-                pBArticulo.Load(art.Imagen);
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Dispose();
+            Articulos art = (Articulos)dGVDetalle.CurrentRow.DataBoundItem;
+            pBArticulo.Load(art.Imagen);
         }
     }
 
