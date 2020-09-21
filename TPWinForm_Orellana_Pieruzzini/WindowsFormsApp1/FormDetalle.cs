@@ -48,7 +48,9 @@ namespace WindowsFormsApp1
             dGVDetalle.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dGVDetalle.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dGVDetalle.BackgroundColor = System.Drawing.SystemColors.Control;
-            dGVDetalle.Columns[6].Visible = false;
+            dGVDetalle.Columns[0].Visible = false;
+            dGVDetalle.Columns[1].Visible = false;
+            dGVDetalle.Columns[8].Visible = false;
         }
 
         private void dGVDetalle_SelectionChanged(object sender, EventArgs e)

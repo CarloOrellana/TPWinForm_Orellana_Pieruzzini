@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
 {
     public partial class FormModificar : Form
     {
-        private string tBId;
+       
 
         public List<Articulos> Lista { get; private set; }
 
@@ -60,9 +60,13 @@ namespace WindowsFormsApp1
                     Busqueda = Lista.FindAll(Y => Y.Codigo.ToLower().Contains(tBuscar.Text.ToLower()));
                     dGVModificar.DataSource = Busqueda;
                     dGVModificar.Columns[0].Visible = false;
+                    dGVModificar.Columns[1].Visible = false;
+                    dGVModificar.Columns[8].Visible = false;
                 }
                 dGVModificar.DataSource = Busqueda;
                 dGVModificar.Columns[0].Visible = false;
+                dGVModificar.Columns[1].Visible = false;
+                dGVModificar.Columns[8].Visible = false;
             }
             catch(Exception ex)
             {

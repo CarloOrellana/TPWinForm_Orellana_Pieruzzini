@@ -11,7 +11,7 @@ namespace Catologo
     public class CatologoArticulo
     {
         //private CatologoArticulo p = new CatologoArticulo();
-        private const string V = "select distinct P.Id, P.Codigo, P.Nombre, P.Descripcion, P.ImagenUrl, P.Precio, D.Id,D.Descripcion, C.Id,C.Descripcion  from ARTICULOS P Left join CATEGORIAS C on C.Id = P.IdCategoria inner join MARCAS D  on D.Id = P.IdMarca order by P.Id asc";
+        private const string V = "select distinct P.Id, P.Codigo, P.Nombre, P.Descripcion, P.ImagenUrl, P.Precio, D.Id , D.Descripcion, P.IdCategoria from ARTICULOS P  inner join MARCAS D  on D.Id = P.IdMarca order by P.Id asc";
 
         public List<Articulos> Listar()
         {
@@ -22,7 +22,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = V;
                 comando.Connection = conexion;
@@ -36,6 +36,7 @@ namespace Catologo
                     aux.Codigo = lector.GetString(1);
                     aux.Nombre = lector.GetString(2);
                     aux.Descripcion = lector.GetString(3);
+                    aux.idCat = lector.GetInt32(8);
 
                     aux.Marca = new Marcas();
                     aux.Marca.idMarca = lector.GetInt32(6);
@@ -43,13 +44,14 @@ namespace Catologo
 
                     aux.categoria = new Categoria();
                     //aux.categoria.idCategoria = lector.GetInt32(8);//error
-                    aux.categoria.DescripcionCategoria = (string)lector["descripcion"];
-                   
+                    aux.categoria.DescripcionCategoria = BuscarCategoria(aux.idCat);
+                    
                     aux.Precio = lector.GetDecimal(5);
                     aux.Imagen = (string)lector["ImagenUrl"];
 
                     lista.Add(aux);
-
+                   
+                    
                 }
             }
             catch (Exception ex)
@@ -62,11 +64,6 @@ namespace Catologo
 
         }
 
-        private string ArgumentNullException(string descripcionCategoria)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Marcas> ListarMarca()
         {
             SqlConnection conexion = new SqlConnection();
@@ -76,7 +73,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select Id, Descripcion from MARCAS";
                 comando.Connection = conexion;
@@ -108,7 +105,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source=ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select Id, Descripcion from CATEGORIAS";
                 comando.Connection = conexion;
@@ -138,7 +135,7 @@ namespace Catologo
 
             try 
             {
-                conexion.ConnectionString = "data source= ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -162,7 +159,7 @@ namespace Catologo
 
             try
             {
-                conexion.ConnectionString = "data source= ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -186,8 +183,7 @@ namespace Catologo
             }
 
         }
-        
-      
+            
         public void Editar(Articulos articulos)
         {
             SqlConnection conexion = new SqlConnection();
@@ -196,7 +192,7 @@ namespace Catologo
             
             try
             {
-                conexion.ConnectionString = "data source= ppnt-pc; initial catalog=CATALOGO_DB; integrated security=sspi";
+                conexion.ConnectionString = "data source= DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
                 conexion.Open();
@@ -220,7 +216,46 @@ namespace Catologo
             }
 
         }
+        
+        public string BuscarCategoria(int idCat)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            //List<Categoria> lista = new List<Categoria>();
+            string descripcion = "NULL";
+            try
+            {
+                conexion.ConnectionString = "data source=DESKTOP-GPR5PDL\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "select Id, Descripcion from CATEGORIAS";
+                comando.Connection = conexion;
 
+                conexion.Open();
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    Categoria aux = new Categoria();
+                    aux.idCategoria = lector.GetInt32(0);
+                    aux.DescripcionCategoria = lector.GetString(1);
+                    //lista.Add(aux);
+
+                    if(idCat == aux.idCategoria)
+                    {
+                        descripcion = aux.DescripcionCategoria;
+                        conexion.Close();
+                        return descripcion;
+                    }
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            conexion.Close();
+            return descripcion;
+        }
         
     }
      

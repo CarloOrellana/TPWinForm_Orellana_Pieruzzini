@@ -36,7 +36,9 @@ namespace WindowsFormsApp1
             dgvLista.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvLista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
-            dgvLista.Columns[6].Visible = false;
+            dgvLista.Columns[0].Visible = false;
+            dgvLista.Columns[1].Visible = false;
+            dgvLista.Columns[8].Visible = false;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
